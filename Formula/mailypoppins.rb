@@ -11,24 +11,24 @@
 class Mailypoppins < Formula
   desc "Manage email as Markdown files with YAML frontmatter (CLI + TUI)"
   homepage "https://mailypoppins.dev"
-  version "0.9.0"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-aarch64-apple-darwin.tar.gz"
-      sha256 "6edad9ebdc23f283654cd9808ff99cddcf0fde3809a11c8b0fe74d513e58191b"
+      sha256 "747cb95e4bf70d9a56524faf9d86bd5451b3df86da10c7bec262bd3c201cc644"
     end
     on_intel do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-x86_64-apple-darwin.tar.gz"
-      sha256 "422472ab7eed8c5028c5189f322b5d9f0691fa3e8fa5b6911b2a44554b4fa254"
+      sha256 "ee62d6ccfb9f78886b1d4376ac91bb04114e3b9af35adb32421cc7866ca324a2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "4dfb290504d9eddfb6ab70e92835afd9a55f93d4084f78ebe7479cd842469be2"
+      sha256 "0e702dc4f7bb67e1402b1999b54534a75f5157f796a504802cf27e87389ca561"
     end
   end
 
