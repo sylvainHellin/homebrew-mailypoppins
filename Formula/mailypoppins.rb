@@ -7,28 +7,25 @@
 #
 # The formula installs prebuilt release binaries instead of building from
 # source, so the (eventually signed, see ticket #0012) macOS artifact keeps
-# its signature. Linux uses the static musl build (no runtime deps).
+# its signature. macOS is Apple silicon only (no Intel release build).
+# Linux uses the static musl build (no runtime deps).
 class Mailypoppins < Formula
   desc "Manage email as Markdown files with YAML frontmatter (CLI + TUI)"
   homepage "https://mailypoppins.dev"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-aarch64-apple-darwin.tar.gz"
-      sha256 "747cb95e4bf70d9a56524faf9d86bd5451b3df86da10c7bec262bd3c201cc644"
-    end
-    on_intel do
-      url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-x86_64-apple-darwin.tar.gz"
-      sha256 "ee62d6ccfb9f78886b1d4376ac91bb04114e3b9af35adb32421cc7866ca324a2"
+      sha256 "6b49915de4aabcc6b50c112da01160bc6822190e973e0c630aaf6507134743a6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "0e702dc4f7bb67e1402b1999b54534a75f5157f796a504802cf27e87389ca561"
+      sha256 "7c82df675ba757e2f64daa0336199cf00b9d67f6120cea9d16a2eff3ec4462ee"
     end
   end
 
