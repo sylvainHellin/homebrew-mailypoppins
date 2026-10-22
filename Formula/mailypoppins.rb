@@ -11,21 +11,21 @@
 # Linux uses the static musl build (no runtime deps).
 class Mailypoppins < Formula
   desc "Manage email as Markdown files with YAML frontmatter (CLI + TUI)"
-  homepage "https://mailypoppins.dev"
-  version "0.11.0"
+  homepage "https://mailypoppins.com"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-aarch64-apple-darwin.tar.gz"
-      sha256 "6b49915de4aabcc6b50c112da01160bc6822190e973e0c630aaf6507134743a6"
+      sha256 "11de6657345e7d7c92aa53783127d0a010c0fea0b3645df65891e6d26f4844c3"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sylvainHellin/mailypoppins/releases/download/v#{version}/mailypoppins-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "7c82df675ba757e2f64daa0336199cf00b9d67f6120cea9d16a2eff3ec4462ee"
+      sha256 "c5192660bb60adb7675227501c979cfa557198c5cea2c4dbac89d214e170081b"
     end
   end
 
